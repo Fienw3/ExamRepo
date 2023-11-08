@@ -1,9 +1,9 @@
-import { Selector } from "testcafe"
+import { Selector } from 'testcafe';
 
 fixture`CalculatorTest`
     .page("./index.html");
 
-//MUltiply Test//
+//Multiply Test//
 test("testmul", async t => {
     await t
 .typeText("#numA", "1")
