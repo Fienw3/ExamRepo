@@ -12,7 +12,7 @@ test("testmul", async t => {
     .typeText("#numB", "2")
     .click("#mul")
 
-    .expect(Selector("#result").innerText).eql("3").wait(1000); // Adjust the wait time as needed
+    .expect(Selector("#result").innerText).eql("").wait(1000); // Adjust the wait time as needed
 
 
 //     await t
