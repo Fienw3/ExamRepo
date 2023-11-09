@@ -1,31 +1,23 @@
 import { Selector } from 'testcafe';
 
 fixture`CalculatorTest`
-    .page("./dist/index.html");
+    .page('http://localhost:5173/');
+
+
+    const result = Selector('#result');
 
 //Multiply Test//
 
-
 test("testmul", async t => {
     await t
-    .typeText("#numA", "1")
-    .typeText("#numB", "2")
+    .typeText("#numA", '1')
+    .typeText("#numB", '2')
     .click("#mul")
 
-    .expect(Selector("#result").innerText).eql("").wait(1000); // Adjust the wait time as needed
-
-
-//     await t
-// .typeText("#numA", "1")
-// .typeText("#numB", "2")
-// .click("#mul")
-
-// .expect(Selector("#result").innerText).eql("");
-
-//.expect(Selector("#result").innerText).eql("2");
+    .expect(result.textContent).eql('2');
 });
 
-/* 
+
 //Addition Test//
 test("testadd", async t => {
     await t
@@ -33,7 +25,7 @@ test("testadd", async t => {
 .typeText("#numB", "600")
 .click("#add")
 
-.expect(Selector("#result").innerText).eql("1000");
+.expect(result.textContent).eql('1000');
 });
 
 
@@ -44,7 +36,7 @@ test("testdiv", async t => {
 .typeText("#numB", "4")
 .click("#div")
 
-.expect(Selector("#result").innerText).eql("2");
+.expect(result.textContent).eql('2');
 });
 
 
@@ -56,5 +48,5 @@ test("testsub", async t => {
 .click("#sub")
 
 
-.expect(Selector("#result").innerText).eql("6");
-}); */
+.expect(result.textContent).eql('6');
+});
