@@ -36,7 +36,7 @@ const addButton = document.getElementById('add') as HTMLButtonElement;
 const subButton = document.getElementById('sub') as HTMLButtonElement;
 const mulButton = document.getElementById('mul') as HTMLButtonElement;
 const divButton = document.getElementById('div') as HTMLButtonElement;
-const result = document.getElementById('result') as HTMLDivElement;
+const result = document.getElementById("result") as HTMLOutputElement
 
 
 addButton.addEventListener('click', () => { //Adds listening to the buttons aka the event listeners, so that when the user clicks on the button, the function will run.
